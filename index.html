@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>Mtc Website</title>
+    <link rel="stylesheet" href="indexstyles.css">
+
+  </head>
+
+<body>
+
+  <header>
+    <div class="context">
+  
+  </div>
+    <div class="company-logo"><img src="/images/mtclogo2.png" width="300px"></div>
+    <nav class="navbar">
+      <ul class="nav-items">
+        <li class="nav-item"><a href="#" class="nav-link">Home></li>
+        <li class="nav-item"><a href="#" class="nav-link">Sponsor</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact </a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">
+      <i class="bx bx-menu"></i>
+      <i class="bx bx-x"></i>
+    </div>
+  </header>
+  <main>
+
+    <!-- HOME SECTION -->
+    <section class="container section-1">
+        <div class="slogan">
+            <div class="headingcontainer">
+              <br>
+              <br>
+              <br>
+              
+              <br>
+              <br>
+              <br>
+              
+                <!--<h1>Microsoft <span class="txt-type" data-wait="3000" data-words='["Technical Community"]'></span></h1>-->
+                <span>
+                  Microsoft Technical Community
+                </span>
+                <br>
+                <h2><b>Technology is making people's lives easier.
+                    We, here at MTC are, constantly
+                    Innovating, Inventing and Improvising.</b></h2>
+
+                    <br>
+                    <br>
+              
+                    <div class="containerbtn">
+                      <button><a href="#about">About US</a></button>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button><a href="#about">Events</a></button>
+                    </div> 
+
+              </div>
+        </div>
+
+
+        <div class="home-computer-container">
+       <!--   <img class="home-computer" src="https://github.com/r-e-d-ant/Computer-store-website/blob/main/assets/images/home_img.png?raw=true" alt="a computer in dark with shadow" class="home-img">-->
+
+
+       <section class="logobox">
+
+        <section class="wrapper">
+        <div class="one"></div>
+        <div class="one1"></div>
+         <div class="one2"></div>
+         <div class="one3"></div>
+        <div class="one4"></div>
+         <div class="one5"></div>
+         <div class="one6"></div>
+        <div class="one7"></div>
+         <div class="one8"></div>
+        <div class="one9"></div>
+         <div class="one10"></div>
+         <div class="one11"></div>
+         <div class="one12"></div>
+         <div class="one13"></div>
+         <div class="one14"></div>
+         <div class="one15"></div>
+         <div class="one16"></div>
+         <div class="one17"></div>
+        <div class="one18"></div>
+        <div class="one19"></div>
+        <div class="one20"></div>
+ 
+        </section>
+        </section>    
+
+
+
+
+
+
+      </div>
+
+
+         
+    <div class="area" >
+      <ul class="circles">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+      </ul>
+</div > 
+
+
+
+
+      </section>
+      <div class="parallax"></div>
+      <section id="about" class="about">
+      <div style="height:1000px;background-color: #212225;font-size:36px">
+
+        <h2 style="margin-left: 100px;color: white; font-size: larger;"><br>
+  
+          About us</h2>
+          <br>
+          <div class="dotted"><p style="color:white">Microsoft Technical Community only focuses on technical events and approaches them with complete professionalism. ‘Pathshala’ sessions, ‘Career Pathway’ sessions, ‘Buggymania’ and ‘Career Drive’ our main flagship event are just some of the events we conduct over a year with the sole purpose of creating better IT professionals. The team at Microsoft Technical Community is full of hard-working and professional individuals, who are always learning and teaching something new.</p></div>
+          <div class="dashed">Microsoft Technical Community was established <br>in February 2018 with the vision of “Innovating, <br>Inventing and Improvising” to educate fellow <br> computer science enthusiasts about various <br> aspects of the technical world. The goal was and <br> is to create professionals out of amateurs and to <br>teach not just Microsoft technologies but <br> anything that is required for students to excel in <br> their careers. We have come a long way since <br> then, and still have many more goals to reach.</div>
+          
+      </div>
+      </section>
+
+<script>
+
+
+'use strict'
+
+const menuToggle = document.querySelector('.menu-toggle');
+const bxMenu = document.querySelector('.bx-menu');
+const bxX = document.querySelector('.bx-x');
+
+const navBar = document.querySelector('.navbar');
+
+// --- open menu ---
+
+bxMenu.addEventListener('click', (e)=> {
+    if(e.target.classList.contains('bx-menu')){
+        navBar.classList.add('show-navbar');
+        bxMenu.classList.add('hide-bx');
+        bxX.classList.add('show-bx');
+    }
+})
+
+// --- close menu ---
+
+bxX.addEventListener('click', (e)=> {
+    if(e.target.classList.contains('bx-x')){
+        navBar.classList.remove('show-navbar');
+        bxMenu.classList.remove('hide-bx');
+        bxX.classList.remove('show-bx');
+    }
+})
+
+
+
+
+
+
+
+// ES6 Class
+class TypeWritter {
+  constructor(txtElement, words, wait = 3000) {
+    this.txtElement = txtElement;
+    this.words = words;
+    this.txt = '';
+    this.wordIndex = 0;
+    this.wait = parseInt(wait, 10);
+    this.type();
+    this.isDeleting = false;
+  }
+
+  // Type Method
+  type() {
+    // Current index of word
+    const current = this.wordIndex % this.words.length;
+    // Get full text of current word
+    const fullTxt = this.words[current];
+    // Check if deleting
+    if (this.isDeleting) {
+      // Remove char
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      // Add char
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    //Insert txt into element
+    this.txtElement.innerHTML = `<span class="txt">${
+      this.txt
+    }<span class="blinking-cursor">|</span></span>`;
+
+    // Initial type Speed
+    let typeSpeed = 150;
+
+    if (this.isDeleting) {
+      typeSpeed /= 2;
+    }
+
+    // If word is complete
+    if (!this.isDeleting && this.txt === fullTxt) {
+      // Make pause at end
+      typeSpeed = this.wait;
+      // Set delete to true
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      // Move to next word
+      this.wordIndex++;
+      // Pause before start typing
+      typeSpeed = 500;
+    }
+
+    setTimeout(() => this.type(), typeSpeed);
+  }
+}
+
+// Init on DOM  Load
+document.addEventListener('DOMContentLoaded', init);
+
+// Init App
+function init() {
+  const txtElement = document.querySelector('.txt-type');
+  const words = JSON.parse(txtElement.getAttribute('data-words'));
+  const wait = txtElement.getAttribute('data-wait');
+  // Init TypeWritter
+  new TypeWritter(txtElement, words, wait);
+}
+
+
+
+
+
+
+   </script>
+
+
+
+</html>
